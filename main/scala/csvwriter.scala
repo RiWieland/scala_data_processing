@@ -1,5 +1,7 @@
 package csvwriter
 
+import au.com.bytecode.opencsv.CSVWriter
+import scala.collection.JavaConverters._
 
 
 object csv_writer{
@@ -10,6 +12,8 @@ object csv_writer{
 
     return listOfRecords
 }
+  def figures_to_csv(listOfRecords: ListBuffer[Array[String]], stock: index.Index_object) = {
 
+}
 
 }
