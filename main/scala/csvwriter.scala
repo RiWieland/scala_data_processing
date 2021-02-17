@@ -11,6 +11,7 @@ import index.index
 
 object csv_writer{
 
+  // Init for adding fix schema to csv
   def init_for_csv(): ListBuffer[Array[String]] = {
       val listOfRecords = new ListBuffer[Array[String]]()
       val CSVschema = Array("company", "analyst", "valuation_new", "rating", "valuation_percent", "price_hist", "analyst_name", "date_topic", "date_release", "date_publish")
@@ -18,7 +19,7 @@ object csv_writer{
 
     return listOfRecords
 }
-// : ListBuffer[Array[String]]
+
   def figures_to_csv(listOfRecords: ListBuffer[Array[String]], stock: index.Index_object) = {
       println("CSV writer called for ", stock.Stock)
       val date = java.time.LocalDate.now
