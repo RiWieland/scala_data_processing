@@ -4,6 +4,10 @@ scala project to create
 - real-time streaming for text 
 - real-time streaming for numbers
 - big data crawl
-- storage to MongoDB
+- storage to Azure Cosmos
 
-# efficient Web-Crawl using multi-threading with Future Class
+# Scala Monads
+
+# Efficient Web-Crawl using multi-threading with Scala Future Class
+
+
