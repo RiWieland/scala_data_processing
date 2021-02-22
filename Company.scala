@@ -6,6 +6,8 @@ object stock_analyst_links {
 
   def tryToInt( s: String ) = Try(s.toInt).toOption
 
+  def create_landing_link(company: String, page: Int) : String = s"XXX"
+
   
 
   def get_max_page(link_raw: Elements ) : Option[Int] = {
