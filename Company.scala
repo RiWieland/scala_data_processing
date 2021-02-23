@@ -24,6 +24,13 @@ object stock_analyst_links {
     return list_num.max
   }
 
+  def get_webpage_content(link:String, html_element:String) : Elements = {
+    val doc: Document = Jsoup.connect(link).userAgent("Mozilla").get()
+    val link_raw: Elements = doc.select(html_element)
+
+    return link_raw
+  }
+
 
   }
 
