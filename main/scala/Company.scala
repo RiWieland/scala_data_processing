@@ -1,14 +1,23 @@
+package Company
 
+import scala.collection.mutable.ListBuffer
+import scala.collection.JavaConverters._
+
+import org.jsoup.Jsoup
+import org.jsoup.nodes.{Document, Element}
+import org.jsoup.select.Elements;
+
+import scala.util.Try
+
+import analyst.statement
 
 object stock_analyst_links {
 
   case class link(Link: String)
 
+  def create_landing_link(company: String, page: Int) : String = s"https://www.finanzen.net/analysen/${company}-analysen?p=${page}"
+    
   def tryToInt( s: String ) = Try(s.toInt).toOption
-
-  def create_landing_link(company: String, page: Int) : String = s"XXX"
-
-  
 
   def get_max_page(link_raw: Elements ) : Option[Int] = {
 
@@ -33,6 +42,8 @@ object stock_analyst_links {
 
   def get_history(company: String) : ListBuffer[link] ={
   
+    // val company = "AMD"
+
     // Init: 
     val links_list = new ListBuffer[link]()
     val max_range = get_max_page(get_webpage_content(create_landing_link(company, 1), "a[href]"))
@@ -55,6 +66,3 @@ object stock_analyst_links {
     return links_list
   }
 }
-
-  }
-
