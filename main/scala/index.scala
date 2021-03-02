@@ -1,0 +1,7 @@
+package index
+
+
+
+object index{
+  
+}
