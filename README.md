@@ -1,12 +1,11 @@
 # scala_crawl
 
 scala project to create 
-- real-time streaming for text 
-- real-time streaming for numbers
-- big data crawl
+- real-time streaming 
+- data crawl
 - storage to Azure Cosmos
 
-# Scala Monads
+# Scala functional programming
 
 # Efficient Web-Crawl using multi-threading with Scala Future Class
 
