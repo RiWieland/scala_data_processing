@@ -1,5 +1,12 @@
 package index
 
+import org.jsoup.Jsoup
+import org.jsoup.nodes.{Document, Element}
+import org.jsoup.select.Elements;
+import scala.collection.JavaConverters._
+import scala.collection.mutable.ListBuffer
+import scala.util.Try
+
 
 
 object index{
