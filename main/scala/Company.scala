@@ -58,7 +58,7 @@ object stock_analyst_links {
         
         if (entry.attr("href").toLowerCase.contains("/analyse/")){
           
-          links_list += link("https://www.finanzen.net" + entry.attr("href")) 
+          links_list += link("XXX" + entry.attr("href")) 
 
         }
       }
