@@ -15,7 +15,7 @@ object stock_analyst_links {
 
   case class link(Link: String)
 
-  def create_landing_link(company: String, page: Int) : String = s"https://www.finanzen.net/analysen/${company}-analysen?p=${page}"
+  def create_landing_link(company: String, page: Int) : String = s"XXX${company}XXX?p=${page}"
     
   def tryToInt( s: String ) = Try(s.toInt).toOption
 
