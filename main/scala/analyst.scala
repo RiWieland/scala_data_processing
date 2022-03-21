@@ -20,3 +20,5 @@ import org.jsoup.select.Elements;
       }
       val fig : Array[Any] = extract_figures(text_list)
       val dat  = extract_date(link)
+    
+    figures(fig(0).toString,fig(1).toString,fig(2).toString.toDouble,fig(3).toString,fig(4).toString.toDouble,fig(5).toString.toDouble, fig(6).toString, dat(0).toString, dat(1), dat(2) )
