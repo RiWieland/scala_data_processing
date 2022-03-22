@@ -1,12 +1,9 @@
 # scala_crawl
 
-scala project to create 
-- real-time streaming 
-- data crawl
-- storage to Azure Cosmos
+scala project to create a large data webcrawl for financial data
 
 # Scala functional programming
 
-# Efficient Web-Crawl using multi-threading with Scala Future Class
-
+# Parallel Processing with Future class
+The bottleneck of preforming the webcrawl is the accessing and scrapping of the webpage. As this is based on a separate links for the different pages this operation is parallizeable. I used future class for preforming the paralization.
 
