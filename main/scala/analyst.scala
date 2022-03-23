@@ -50,3 +50,17 @@ import org.jsoup.select.Elements;
     return Array(company, analyst, valuation_new, rating, valuation_percent, price_hist, analyst_name)
 
   }
+      def extract_date(link: String) : Array[String] = {
+
+      val doc: Document = Jsoup.connect(link).userAgent("Mozilla").ignoreHttpErrors(true).get()
+      val link_List: Elements = doc.select("div")
+      
+      val text_list = new ListBuffer[String]()
+      
+      for (entry: Element <- link_List.asScala){
+        
+        if (entry.text.contains("Original-Studie")){ // || entry.text.contains("Der Analyst Cascend Securities") ){
+          text_list += entry.text
+        }
+      }
+
