@@ -64,3 +64,6 @@ import org.jsoup.select.Elements;
         }
       }
 
+      val eles : Elements = doc.select("div.optionBar") //pull-left mright-20
+      
+      val topic_list = new ListBuffer[String]()
