@@ -15,7 +15,7 @@ object stock_analyst_links {
 
   case class link(Link: String)
 
-  def create_landing_link(company: String, page: Int) : String = s"https://www.finanzen.net/analysen/${company}-analysen?p=${page}"
+  def create_landing_link(company: String, page: Int) : String = s"XXX/${company}-analysen?p=${page}"
     
   def tryToInt( s: String ) = Try(s.toInt).toOption
 
@@ -58,7 +58,7 @@ object stock_analyst_links {
         
         if (entry.attr("href").toLowerCase.contains("/analyse/")){
           
-          links_list += link("https://www.finanzen.net" + entry.attr("href")) 
+          links_list += link("XXX" + entry.attr("href")) 
 
         }
       }
