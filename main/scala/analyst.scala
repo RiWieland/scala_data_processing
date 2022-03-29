@@ -65,7 +65,7 @@ object statement{
     
   def extract_date(link: String) : Array[String] = {
 
-      //val link = "https://www.finanzen.net/analyse/carl_zeiss_meditec_halten-dz_bank_747698"
+      //val link = "XXX"
       val doc: Document = Jsoup.connect(link).userAgent("Mozilla").ignoreHttpErrors(true).get()
       val link_List: Elements = doc.select("div")
       
