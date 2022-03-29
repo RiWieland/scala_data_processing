@@ -13,7 +13,7 @@ object index{
   
   case class Index_object(Index: String, Stock: String)
 
-    def landing_index(index: String, page: Int ) : String = s"https://www.finanzen.net/index/${index}/werte?p=${page}"
+    def landing_index(index: String, page: Int ) : String = s"XXX/${index}/werte?p=${page}"
     
     def tryToInt(s: String) = Try(s.toInt).toOption
 
@@ -54,8 +54,8 @@ object index{
             && entry.attr("href").toLowerCase.contains("/aktien/") 
             && entry.attr("href").toLowerCase.length < 100){
                             
-              Stocks_landing += Index_object(market_index.toString, "https://www.finanzen.net" + entry.attr("href"))
-              Stocks_analysts += Index_object(market_index.toString, "https://www.finanzen.net/analysen" + entry.attr("href").replace("-aktie", "-analysen").replace("/aktien", ""))
+              Stocks_landing += Index_object(market_index.toString, "XXX" + entry.attr("href"))
+              Stocks_analysts += Index_object(market_index.toString, "XXX" + entry.attr("href").replace("-aktie", "-analysen").replace("/aktien", ""))
 
               company_list += Index_object(market_index.toString, entry.attr("href").replace("-aktie", "").replace("/aktien", "").replace("/",""))
               
